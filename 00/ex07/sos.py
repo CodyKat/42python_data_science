@@ -15,7 +15,7 @@ MORSE_CODE_DICT = {'A': '.-', 'B': '-...',
                    '0': '-----', ' ':  '/'}
 
 
-def main():
+def sos():
     if len(sys.argv) != 2:
         print("AssertionError: the arguments are bad")
         sys.exit()
@@ -35,5 +35,8 @@ def main():
             print(' ', end='')
 
 
+sos.__doc__ = """sos print MORSE CODE"""
+
+
 if __name__ == "__main__":
-    main()
+    sos()

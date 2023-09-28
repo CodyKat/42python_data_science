@@ -12,3 +12,5 @@ def ft_tqdm(lst):
         print("\r%3d%%|[%-64s]| %d/%d" % (percent, bar, ret, len(lst)), end="")
         yield ret
         ret += 1
+
+ft_tqdm.__doc__ = """this is my ft_loading bar"""
