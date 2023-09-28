@@ -16,18 +16,13 @@ MORSE_CODE_DICT = {'A': '.-', 'B': '-...',
 
 
 def sos():
-    if len(sys.argv) != 2:
-        print("AssertionError: the arguments are bad")
-        sys.exit()
+    assert len(sys.argv) == 2, 'the arguments are bad'
     string = sys.argv[1].upper()
     output = []
 
     for i in string:
-        try:
-            output.append(MORSE_CODE_DICT[i])
-        except BaseException:
-            print("AssertionError: the arguments are bad")
-            sys.exit()
+        assert i in MORSE_CODE_DICT, 'the arguments are bad'
+        output.append(MORSE_CODE_DICT[i])
 
     for i in range(len(output)):
         print(output[i], end='')
