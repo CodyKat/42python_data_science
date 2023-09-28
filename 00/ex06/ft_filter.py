@@ -1,10 +1,3 @@
-def isdigit(string: str) -> bool:
-    for i in string:
-        if i.isdigit() is False:
-            return False
-    return True
-
-
 def ft_filter(function, iterable) -> object:
     ret = [i for i in iterable if function(i) is True]
     for i in ret:
