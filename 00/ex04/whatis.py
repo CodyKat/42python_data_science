@@ -1,8 +1,8 @@
-import sys
+import sys as sys
 
 def isdigit(string : str) -> bool:
     for i in string:
-        if i.isdigit() == False:
+        if i.isdigit() is False:
             return False
     return True
 
