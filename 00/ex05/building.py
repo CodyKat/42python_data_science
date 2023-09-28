@@ -38,11 +38,11 @@ text_analyzer.__doc__ = """count characters..
 
 
 def main():
-    print(text_analyzer.__doc__)
-    if len(sys.argv) > 1:
-        text_analyzer(sys.argv[1])
-    else:
+    if len(sys.argv) == 1:
         text_analyzer()
+    else:
+        assert len(sys.argv) == 2, 'Argument count must be 1 or 0'
+        text_analyzer(sys.argv[1])
 
 
 if __name__ == "__main__":
