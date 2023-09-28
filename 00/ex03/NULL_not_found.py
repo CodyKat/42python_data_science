@@ -3,14 +3,15 @@ def NULL_not_found(object: any) -> int:
     typename = typeinfo.__name__
     if typename == "NoneType":
         print("Nothing: {} {}".format(object, typeinfo))
-    elif typename == "int" and object == 0:
+    elif typename == "int":
         print("Zero: {} {}".format(object, typeinfo))
-    elif typename == "float" and object == float("NaN"):
+    elif typename == "float":
         print("Cheese: {} {}".format(object, typeinfo))
     elif typename == "str" and object == '':
         print("Empty: {} {}".format(object, typeinfo))
-    elif typename == "bool" and object == False:
+    elif typename == "bool":
         print("Fake: {} {}".format(object, typeinfo))
     else:
         print("Type not Found")
-    return 1
+        return 1
+    return 0
