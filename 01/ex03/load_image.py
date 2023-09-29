@@ -5,7 +5,7 @@ from numpy import array
 
 
 def ft_load(path: str) -> array:
-    image : PIL.JpegImagePlugin.JpegImageFile
+    image: PIL.JpegImagePlugin.JpegImageFile
     try:
         image = Image.open(path)
     except FileNotFoundError:
@@ -14,3 +14,6 @@ def ft_load(path: str) -> array:
     print(np.shape(image))
     np_img = np.array(image)
     return np_img
+
+
+ft_load.__doc__ = "load image from path and return numpy array"
