@@ -7,7 +7,7 @@ def filterstring():
     try:
         N = int(sys.argv[2])
     except ValueError:
-        raise ('the arguments are bad')
+        raise AssertionError('the arguments are bad')
     S = sys.argv[1].split(' ')
     words = [word for word in S if (lambda word: len(word) > N)(word)]
     print(words)
