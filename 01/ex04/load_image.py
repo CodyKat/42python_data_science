@@ -12,6 +12,5 @@ def ft_load(path: str) -> array:
     except FileNotFoundError:
         raise AssertionError('image file not found')
 
-    print('The shape of image is:', np.shape(image))
     np_img = np.array(image)
     return np_img

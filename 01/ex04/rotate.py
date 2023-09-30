@@ -10,16 +10,20 @@ def rotate():
 
     start_row = 100
     start_col = 450
-    cropped_image = \
+    cropped_image_2d = \
         gray_img[start_row:start_row + 400, start_col:start_col + 400]
+    cropped_image_3d = np.expand_dims(cropped_image_2d, axis=-1)
+    print('New shape after slicing: (400, 400, 1) or (400, 400)')
+    print(cropped_image_3d)
 
-    n = len(cropped_image)
+    n = len(cropped_image_2d)
 
     rotated_image = np.zeros((n, n))
 
     for i in range(n):
         for j in range(n):
-            rotated_image[j][i] = cropped_image[i][j]
+            rotated_image[j][i] = cropped_image_2d[i][j]
+    print('New shape after Transpose:', rotated_image.shape)
     print(rotated_image)
 
     rotated_image = np.array(rotated_image, dtype=np.uint8)
