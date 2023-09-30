@@ -4,6 +4,7 @@ from load_image import ft_load
 
 
 def zoom():
+    """Zoom on the image"""
     img: np.array = ft_load('animal.jpeg')
     gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 

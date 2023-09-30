@@ -4,6 +4,7 @@ import numpy as np
 
 
 def ft_invert(array) -> array:
+    """invert the color of the image"""
     print('The shape of image is: ', array.shape)
     copy_array = np.copy(array)
     for i in range(len(copy_array)):
@@ -17,10 +18,8 @@ def ft_invert(array) -> array:
     return copy_array
 
 
-ft_invert.__doc__ = "invert the color of the image"
-
-
 def ft_red(array) -> array:
+    """show only red color of the image"""
     print('The shape of image is: ', array.shape)
     copy_array = np.copy(array)
     copy_array[:, :, 0] = 0
@@ -33,10 +32,8 @@ def ft_red(array) -> array:
     return copy_array
 
 
-ft_red.__doc__ = "show only red color of the image"
-
-
 def ft_green(array) -> array:
+    """show only green color of the image"""
     print('The shape of image is: ', array.shape)
     copy_array = np.copy(array)
     copy_array[:, :, 0] = 0
@@ -49,10 +46,8 @@ def ft_green(array) -> array:
     return copy_array
 
 
-ft_green.__doc__ = "show only green color of the image"
-
-
 def ft_blue(array) -> array:
+    """show only blue color of the image"""
     print('The shape of image is: ', array.shape)
     copy_array = np.copy(array)
     copy_array[:, :, 1] = 0
@@ -65,10 +60,8 @@ def ft_blue(array) -> array:
     return copy_array
 
 
-ft_blue.__doc__ = "show only blue color of the image"
-
-
 def ft_grey(array) -> array:
+    """show only grey color of the image"""
     print('The shape of image is: ', array.shape)
     copy_array = np.copy(array)
     for i in range(len(copy_array)):
@@ -81,6 +74,3 @@ def ft_grey(array) -> array:
     cv2.waitKey(0)
     cv2.destroyWindow('Grey Image')
     return copy_array
-
-
-ft_grey.__doc__ = "show only grey color of the image"

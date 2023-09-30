@@ -4,6 +4,7 @@ from load_image import ft_load
 
 
 def rotate():
+    """rotate image 90 degrees reverse clockwise"""
     img = ft_load('animal.jpeg')
     gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
@@ -26,9 +27,6 @@ def rotate():
     cv2.imshow('Zoomed Image', rotated_image)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
-
-
-rotate.__doc__ = "rotate image 90 degrees reverse clockwise"
 
 
 if __name__ == '__main__':

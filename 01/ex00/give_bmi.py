@@ -1,5 +1,6 @@
 def give_bmi(height: list[int | float], weight: list[int | float])\
       -> list[int | float]:
+    """calculate bmi"""
     for value in height:
         if not isinstance(value, (int, float)):
             raise ValueError('Invalid Value... height must be int or float')
@@ -15,10 +16,8 @@ def give_bmi(height: list[int | float], weight: list[int | float])\
     return bmi
 
 
-give_bmi.__doc__ = "calculate bmi"
-
-
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
+    """check that bmi is over the limit"""
     for value in bmi:
         if not isinstance(value, (int, float)):
             raise ValueError('Invalid Value... bmi must be int or float')
@@ -29,6 +28,3 @@ def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
         else:
             output.append(False)
     return output
-
-
-apply_limit.__doc__ = "check that bmi is over the limit"
