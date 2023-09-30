@@ -1,30 +1,22 @@
 def give_bmi(height: list[int | float], weight: list[int | float])\
       -> list[int | float]:
     """calculate bmi"""
-    for value in height:
-        if not isinstance(value, (int, float)):
-            raise ValueError('Invalid Value... height must be int or float')
-    for value in weight:
-        if not isinstance(value, (int, float)):
-            raise ValueError('Invalid Value... weight must be int or float')
+
     assert len(height) == len(weight), \
         'sizeof height and sizeof weight is different'
 
-    bmi = []
-    for i in range(len(height)):
-        bmi.append(weight[i] / (height[i]**2))
+    if all(isinstance(h, (int, float)) and isinstance(w, (int, float))
+           for h, w in zip(height, weight)):
+        bmi = [ w / (h**2) for w, h in zip(weight, height)]
+    else:
+        raise ValueError('Invalid Value. height and weight must be int or float')
     return bmi
 
 
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
     """check that bmi is over the limit"""
-    for value in bmi:
-        if not isinstance(value, (int, float)):
-            raise ValueError('Invalid Value... bmi must be int or float')
-    output = []
-    for value in bmi:
-        if value < limit:
-            output.append(True)
-        else:
-            output.append(False)
+    if not all(isinstance(value, (int, float)) for value in bmi) \
+        or not isinstance(limit, (int, float)):
+        raise ValueError('Invalid Value. bmi must be int or float')
+    output = [value > limit for value in bmi]
     return output
