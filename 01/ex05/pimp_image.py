@@ -5,7 +5,6 @@ import numpy as np
 
 def ft_invert(array) -> array:
     """invert the color of the image"""
-    print('The shape of image is: ', array.shape)
     copy_array = np.copy(array)
     for i in range(len(copy_array)):
         for j in range(len(copy_array[i])):
@@ -20,7 +19,6 @@ def ft_invert(array) -> array:
 
 def ft_red(array) -> array:
     """show only red color of the image"""
-    print('The shape of image is: ', array.shape)
     copy_array = np.copy(array)
     copy_array[:, :, 0] = 0
     copy_array[:, :, 1] = 0
@@ -34,7 +32,6 @@ def ft_red(array) -> array:
 
 def ft_green(array) -> array:
     """show only green color of the image"""
-    print('The shape of image is: ', array.shape)
     copy_array = np.copy(array)
     copy_array[:, :, 0] = 0
     copy_array[:, :, 2] = 0
@@ -48,7 +45,6 @@ def ft_green(array) -> array:
 
 def ft_blue(array) -> array:
     """show only blue color of the image"""
-    print('The shape of image is: ', array.shape)
     copy_array = np.copy(array)
     copy_array[:, :, 1] = 0
     copy_array[:, :, 2] = 0
@@ -62,7 +58,6 @@ def ft_blue(array) -> array:
 
 def ft_grey(array) -> array:
     """show only grey color of the image"""
-    print('The shape of image is: ', array.shape)
     copy_array = np.copy(array)
     for i in range(len(copy_array)):
         for j in range(len(copy_array[i])):
