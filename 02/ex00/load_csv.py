@@ -8,4 +8,5 @@ def load(path: str):
         csv_file = pd.read_csv(path, sep=',')
     except FileNotFoundError:
         return None
+    print('Loading dataset of dimensions', csv_file.shape)
     return csv_file
