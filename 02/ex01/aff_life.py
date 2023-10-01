@@ -5,10 +5,10 @@ import matplotlib.pyplot as plt
 def main():
     """Show graph south korea life expectancy."""
     csv_file = load('life_expectancy_years.csv')
-    row = csv_file[csv_file['country'] == 'South Korea']
-    col = row.drop(columns=['country']).T
-    col = col.rename(columns={col.columns[0]:'South Korea'})
-    col.plot(xlabel='Year', ylabel='Life expectancy')
+    my_col = csv_file.loc[csv_file['country'] == 'South Korea']
+    my_col = my_col.rename(index={94:'South Korea'})
+    my_col = my_col.drop(columns=['country']).T
+    my_col.plot(xlabel='Year', ylabel='Life expectancy')
     plt.title('South Korea Life expectancy Projections')
     plt.show()
 
