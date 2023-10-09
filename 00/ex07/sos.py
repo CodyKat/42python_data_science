@@ -16,6 +16,7 @@ MORSE_CODE_DICT = {'A': '.-', 'B': '-...',
 
 
 def sos():
+    """sos print MORSE CODE"""
     assert len(sys.argv) == 2, 'the arguments are bad'
     string = sys.argv[1].upper()
     output = []
@@ -28,9 +29,6 @@ def sos():
         print(output[i], end='')
         if (i in range(len(output) - 1)):
             print(' ', end='')
-
-
-sos.__doc__ = """sos print MORSE CODE"""
 
 
 if __name__ == "__main__":

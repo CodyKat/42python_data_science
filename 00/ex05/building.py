@@ -2,7 +2,8 @@ import sys
 
 
 def text_analyzer(string=None):
-
+    """count characters..
+        lower case, upper case, punctuation, space, digit"""
     if string is None:
         print("What is the text to count?")
         string = sys.stdin.readline()
@@ -31,10 +32,6 @@ def text_analyzer(string=None):
     print(f"{punc} punctuation marks")
     print(f"{space} spaces")
     print(f"{digit} digits")
-
-
-text_analyzer.__doc__ = """count characters..
-        lower case, upper case, punctuation, space, digit"""
 
 
 def main():
