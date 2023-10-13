@@ -9,6 +9,7 @@ def main():
     my_col = my_col.rename(index={94:'South Korea'})
     my_col = my_col.drop(columns=['country']).T
     my_col.plot(xlabel='Year', ylabel='Life expectancy')
+    print(my_col)
     plt.title('South Korea Life expectancy Projections')
     plt.show()
 
