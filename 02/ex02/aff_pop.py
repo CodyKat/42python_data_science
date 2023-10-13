@@ -11,11 +11,12 @@ def main():
     """"""
     population_total = load('population_total.csv')
     population_total.set_index(population_total['country'], inplace=True)
-    korean_row = population_total.T['South Korea'][1:251]
-    france_row = population_total.T['France'][1:251]
-
+    korean_row = population_total.T['South Korea'].loc['1800':'2050']
+    france_row = population_total.T['France'].loc['1800':'2050']
     korean_row = korean_row.str.replace('M', 'e6')
     france_row = france_row.str.replace('M', 'e6')
+
+
     korean_row = korean_row.astype(float)
     france_row = france_row.astype(float)
 
