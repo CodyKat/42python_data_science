@@ -1,4 +1,4 @@
-from matplotlib import axis, pyplot as plt
+from matplotlib import pyplot as plt
 from load_csv import load
 import pandas as pd
 import numpy as np
@@ -13,6 +13,8 @@ def main():
     population_total.set_index(population_total['country'], inplace=True)
     korean_row = population_total.T['South Korea'].loc['1800':'2050']
     france_row = population_total.T['France'].loc['1800':'2050']
+    print(type(korean_row[0]))
+    print(korean_row[0])
     korean_row = korean_row.str.replace('M', 'e6')
     france_row = france_row.str.replace('M', 'e6')
 
