@@ -5,11 +5,13 @@ class Character(ABC):
     """Character can die"""
     @abstractmethod
     def die(self):
+        """make Character die"""
         pass
 
 
 class Stark(Character):
     """Stark is derived from Character"""
+
     def __init__(self, first_name=None, is_alive=True):
         """constructor of Stark"""
         self.first_name = first_name

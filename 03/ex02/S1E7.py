@@ -1,25 +1,31 @@
 from S1E9 import Character
 
+
 class Baratheon(Character):
     """Representing the Baratheon family."""
-    family_name = 'Baratheon'
-    eyes = 'brown'
-    hairs = 'dark'
+
     def __init__(self, first_name=None, is_alive=True):
         """constructor of Stark"""
         self.first_name = first_name
         self.is_alive = is_alive
-    
-    def __str__(self) -> str:
-        return 'Baratheon'
-    
-    def __repr__(self) -> str:
-        return "Vector: ('{}', '{}', '{}')".format(self.family_name, self.eyes, self.hairs)
+        self.family_name = 'Baratheon'
+        self.eyes = 'brown'
+        self.hairs = 'dark'
 
-    @classmethod
-    def create_baratheon(cls, first_name, is_alive):
+    def __str__(self) -> str:
+        """this function return string when use str(Baratheon)"""
+        return 'Baratheon'
+
+    def __repr__(self) -> str:
+        """detail information in class"""
+        return "Vector: ('{}', '{}', '{}')"\
+            .format(self.family_name, self.eyes, self.hairs)
+
+    @staticmethod
+    def create_baratheon(first_name, is_alive):
+        """make new Baratheon object"""
         new_baratheon = Baratheon(first_name, is_alive)
-        return new_baratheon 
+        return new_baratheon
 
     def die(self):
         """make me die"""
@@ -28,24 +34,29 @@ class Baratheon(Character):
 
 class Lannister(Character):
     """Representing the Baratheon family."""
-    family_name = 'Lannister'
-    eyes = 'brown'
-    hairs = 'dark'
+
     def __init__(self, first_name=None, is_alive=True):
         """constructor of Stark"""
         self.first_name = first_name
         self.is_alive = is_alive
-    
-    def __str__(self) -> str:
-        return 'Lannister'
-    
-    def __repr__(self) -> str:
-        return 'Vector: ({}, {}, {})'.format(self.family_name, self.eyes, self.hairs)
+        self.family_name = 'Lannister'
+        self.eyes = 'brown'
+        self.hairs = 'dark'
 
-    @classmethod
-    def create_lannister(cls, first_name, is_alive):
+    def __str__(self) -> str:
+        """this function return string when use str(Lannister)"""
+        return 'Lannister'
+
+    def __repr__(self) -> str:
+        """detail information in class"""
+        return 'Vector: ({}, {}, {})'\
+            .format(self.family_name, self.eyes, self.hairs)
+
+    @staticmethod
+    def create_lannister(first_name, is_alive):
+        """make new Lannister object"""
         new_lannister = Lannister(first_name, is_alive)
-        return new_lannister 
+        return new_lannister
 
     def die(self):
         """make me die"""
